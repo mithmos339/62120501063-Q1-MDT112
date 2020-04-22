@@ -12,11 +12,11 @@ void setup(){
     pinMode(11,OUTPUT);
     pinMode(12,OUTPUT);
     pinMode(13,OUTPUT);    
-    tone(8,200,500);
+    tone(8,200,500);            //เสียง
     delay(250);                 //0.25 sec
     tone(8,400,100);
 }
-
+//ประกาศตัวแปร
 int c = 0;  //count
 int l = 3;  //light
 int t = 100;  //time
@@ -44,7 +44,7 @@ void loop(){
         delay(t);
         digitalWrite(l,0);               
     }
-    for (l = 13 ; l >= 3 ; l--)
+    for (l = 13;l >= 3;l--)
     {
         if(l == 8)
         {
@@ -59,7 +59,7 @@ void loop(){
             {               
                 c++;
                 tone(8,400,100);        
-                Serial.println("Faster X 2 (Current Speed : X" + String(pow(2, c)) + ")");   //Current Speed : X(2^n)                             
+                Serial.println("Faster X 2 (Current Speed : X" + String(pow(2,c)) + ")");   //Current Speed : X(2^n)                             
                 t = t/2;
             }
         }     
