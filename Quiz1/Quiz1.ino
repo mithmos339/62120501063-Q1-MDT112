@@ -13,7 +13,7 @@ void setup(){
     pinMode(12,OUTPUT);
     pinMode(13,OUTPUT);    
     tone(8,200,500);
-    delay(250);
+    delay(250);                 //0.25 sec
     tone(8,400,100);
 }
 
@@ -30,10 +30,10 @@ void loop(){
             continue;
         }
         digitalWrite(l,1);
-        while (digitalRead(2)==0)
+        while (digitalRead(2) == 0)
         {   
             delay(200);
-            if (digitalRead(2)==1)
+            if (digitalRead(2) == 1)
             {               
                 c++;
                 tone(8,400,100);        
@@ -51,11 +51,11 @@ void loop(){
             digitalWrite(l,0);
             continue;
         }
-        digitalWrite(l, 1);
-        while (digitalRead(2)==0)
+        digitalWrite(l,1);
+        while (digitalRead(2) == 0)
         {   
             delay(200);
-            if (digitalRead(2)==1)
+            if (digitalRead(2) == 1)
             {               
                 c++;
                 tone(8,400,100);        
@@ -64,6 +64,6 @@ void loop(){
             }
         }     
         delay(t);
-        digitalWrite(l, 0);         
+        digitalWrite(l,0);         
     }
-}    
+}
